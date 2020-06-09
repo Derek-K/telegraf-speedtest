@@ -7,7 +7,7 @@ HOWTO:
 1. Install the official SpeedTest CLI from SpeedTest.net - https://www.speedtest.net/apps/cli
 2. Run 'speedtest' once (to accept the license)
 3. Add the configuration into telegraf, either
-   * store speedtest.conf under /etc/telegraf.d  
+   * store speedtest.conf under /etc/telegraf/telegraf.d  
     _\* OR \*_
    * copy the config and add to your telegraf.conf  
 4. Restart telegraf (e.g. under Ubuntu ```sudo systemctl restart telegraf```)
