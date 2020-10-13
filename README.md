@@ -17,4 +17,4 @@ HOWTO:
   
 p.s. be careful when setting the interval time, too often and you may risk being being blocked from utilising the service.
 
-![Example Screenshot](https://raw.githubusercontent.com/risb0r/telegraf-speedtest/master/image.png)
+![Example Screenshot](https://raw.githubusercontent.com/risb0r/telegraf-speedtest/master/screenshot.png)
