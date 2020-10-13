@@ -12,7 +12,7 @@ HOWTO:
    * copy the config and add to your telegraf.conf  
 3. Restart telegraf (e.g. under Ubuntu ```sudo systemctl restart telegraf```)
 4. Import the provided json template into Grafana
-5. Select the appropriate host from the top left of the dashboard
+5. Select the appropriate host variable from the top left of the dashboard
 6. Happy trending!
   
 p.s. be careful when setting the interval time, too often and you may risk being being blocked from utilising the service.
