@@ -3,9 +3,10 @@
 Utilise the official [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli) to export results to Influxdb via Telegraf to be displayed within Grafana.
 
 Tested with Ubuntu 18.04.5 LTS, Telegraf 1.15.3, Grafana v7.2.1, Speedtest by Ookla 1.0.0.2
+A sound understanding of TIG(Telegraf, Influxdb & Grafana) is assumed moving forward
 
 HOWTO:
-1. Install the the official [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli) onto your system
+1. Install the the official [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli) onto your system (select whichever version suits your particular requirements)
 2. Add the configuration into telegraf, either
    * store speedtest.conf under ```/etc/telegraf/telegraf.d/speedtest.conf```  
     _\* OR \*_
