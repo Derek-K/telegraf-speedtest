@@ -13,7 +13,7 @@ A sound understanding of TIG(Telegraf, Influxdb & Grafana) is assumed moving for
     _\* OR \*_
    * copy the config and add to your telegraf.conf  
 3. Restart telegraf (e.g. under Ubuntu ```~$ sudo systemctl restart telegraf.service```)
-4. Import the provided json template into Grafana
+4. Import the provided json template into Grafana and setup the appropriate data source accordingly
 5. Select the appropriate host variable from the top left of the dashboard
 6. Happy trending!
   
