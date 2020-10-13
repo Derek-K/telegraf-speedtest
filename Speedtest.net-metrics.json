@@ -45,6 +45,12 @@
       "id": "table-old",
       "name": "Table (old)",
       "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": "7.1.0"
     }
   ],
   "annotations": {
@@ -65,204 +71,34 @@
   "gnetId": 12428,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1602570938491,
+  "iteration": 1602594617521,
   "links": [],
   "panels": [
     {
-      "cacheTimeout": null,
-      "datasource": "${DS_SPEEDTESTCLI}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
-          "decimals": 1,
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "connected",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "purple",
-                "value": null
-              }
-            ]
-          },
-          "unit": "Mbits"
+          "custom": {}
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 5,
-        "x": 1,
+        "h": 4,
+        "w": 11,
+        "x": 0,
         "y": 0
       },
-      "id": 19,
-      "links": [],
+      "id": 30,
       "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
+        "content": "<style>\n.aligncenter {\n    text-align: center;\n}\n</style>\n<p class=\"aligncenter\">\n<img src=https://www.nbnco.com.au/etc/designs/nbnco2/images/nbn-logo.png width=\"20%\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n<img src=https://www.aussiebroadband.com.au/wp-content/themes/AussieBroadband/images/logo-new.png width=\"20%\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n<img src=https://crosstalksolutions.com/wp-content/uploads/2018/03/ubnt-logo-1024x248.png width=\"20%\"><br>\nPowered by <a href=\"https://github.com/risb0r/telegraf-speedtest\" target=\"_blank\">telegraf-speedtest</a> on github.\n</p>",
+        "mode": "markdown"
       },
-      "pluginVersion": "7.2.1",
-      "targets": [
-        {
-          "groupBy": [],
-          "measurement": "Speedtest",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "download_bandwidth"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [
-                  95
-                ],
-                "type": "percentile"
-              },
-              {
-                "params": [
-                  "/ 131072"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$HostVar$/"
-            }
-          ]
-        }
-      ],
+      "pluginVersion": "7.1.0",
       "timeFrom": null,
       "timeShift": null,
-      "title": "95th Percentile Downstream Average",
+      "title": "",
       "transparent": true,
-      "type": "stat"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS_SPEEDTESTCLI}",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "decimals": 1,
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "connected",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "semi-dark-blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "Mbits"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 5,
-        "x": 6,
-        "y": 0
-      },
-      "id": 5,
-      "links": [],
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.1",
-      "targets": [
-        {
-          "groupBy": [],
-          "measurement": "Speedtest",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "upload_bandwidth"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [
-                  95
-                ],
-                "type": "percentile"
-              },
-              {
-                "params": [
-                  "/ 131072"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$HostVar$/"
-            }
-          ]
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "95th Percentile Upstream Average",
-      "transparent": true,
-      "type": "stat"
+      "type": "text"
     },
     {
       "cacheTimeout": null,
@@ -440,9 +276,19 @@
           ]
         }
       ],
-      "timeFrom": null,
+      "timeFrom": "now/M",
       "timeShift": null,
-      "title": "Total Data Downloaded",
+      "title": "Download Total  ",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "sum"
+            ]
+          }
+        }
+      ],
       "transparent": true,
       "type": "stat"
     },
@@ -614,6 +460,199 @@
       "title": "Packetloss over time",
       "transparent": true,
       "type": "gauge"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "${DS_SPEEDTESTCLI}",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "decimals": 1,
+          "mappings": [
+            {
+              "id": 0,
+              "op": "=",
+              "text": "N/A",
+              "type": 1,
+              "value": "null"
+            }
+          ],
+          "nullValueMode": "connected",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 1,
+        "y": 4
+      },
+      "id": 19,
+      "links": [],
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.2.1",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Speedtest",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "download_bandwidth"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "/ 131072"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$HostVar$/"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Average Downstream Speed",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "${DS_SPEEDTESTCLI}",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "decimals": 1,
+          "mappings": [
+            {
+              "id": 0,
+              "op": "=",
+              "text": "N/A",
+              "type": 1,
+              "value": "null"
+            }
+          ],
+          "nullValueMode": "connected",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 6,
+        "y": 4
+      },
+      "id": 5,
+      "links": [],
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.2.1",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Speedtest",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "upload_bandwidth"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "/ 131072"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$HostVar$/"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Average Upstream Speed",
+      "transparent": true,
+      "type": "stat"
     },
     {
       "cacheTimeout": null,
@@ -799,9 +838,19 @@
           ]
         }
       ],
-      "timeFrom": null,
+      "timeFrom": "now/M",
       "timeShift": null,
-      "title": "Total Data Uploaded",
+      "title": "Upload Total  ",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "sum"
+            ]
+          }
+        }
+      ],
       "transparent": true,
       "type": "stat"
     },
@@ -970,14 +1019,12 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2913",
           "alias": "Latency",
           "fill": 0,
           "linewidth": 2,
           "yaxis": 2
         },
         {
-          "$$hashKey": "object:2914",
           "alias": "Jitter",
           "fill": 0,
           "linewidth": 2,
@@ -1126,7 +1173,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:8706",
           "decimals": 0,
           "format": "Mbits",
           "label": "Bandwidth",
@@ -1136,7 +1182,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:8707",
           "decimals": null,
           "format": "ms",
           "label": "Latency",
@@ -1177,7 +1222,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:4197",
           "alias": "Date Time",
           "align": "auto",
           "colorMode": null,
@@ -1196,7 +1240,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:5100",
           "alias": "Downstream Speed",
           "align": "center",
           "colorMode": null,
@@ -1215,7 +1258,6 @@
           "unit": "Mbits"
         },
         {
-          "$$hashKey": "object:5250",
           "alias": "Upstream Speed",
           "align": "center",
           "colorMode": null,
@@ -1233,7 +1275,6 @@
           "unit": "Mbits"
         },
         {
-          "$$hashKey": "object:5396",
           "alias": "Latency",
           "align": "center",
           "colorMode": null,
@@ -1251,7 +1292,6 @@
           "unit": "ms"
         },
         {
-          "$$hashKey": "object:5542",
           "alias": "Jitter",
           "align": "center",
           "colorMode": null,
@@ -1269,7 +1309,6 @@
           "unit": "ms"
         },
         {
-          "$$hashKey": "object:5937",
           "alias": "Bytes Downloaded",
           "align": "center",
           "colorMode": null,
@@ -1287,7 +1326,6 @@
           "unit": "decmbytes"
         },
         {
-          "$$hashKey": "object:6083",
           "alias": "Bytes Uploaded",
           "align": "center",
           "colorMode": null,
@@ -1305,7 +1343,6 @@
           "unit": "decmbytes"
         },
         {
-          "$$hashKey": "object:6462",
           "alias": "URL",
           "align": "left",
           "colorMode": null,
@@ -1329,7 +1366,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:4299",
           "alias": "Host Mirror",
           "align": "auto",
           "colorMode": null,
@@ -1502,7 +1538,7 @@
     ]
   },
   "time": {
-    "from": "now-2d",
+    "from": "now/M",
     "to": "now"
   },
   "timepicker": {
@@ -1514,5 +1550,5 @@
   "timezone": "",
   "title": "Speedtest.net Metrics",
   "uid": "X7DNPA5Mz",
-  "version": 30
+  "version": 41
 }
