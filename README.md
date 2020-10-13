@@ -1,19 +1,18 @@
-# telegraf-speedtest
-Using official SpeedTest.net cli for telegraf
 
-Tested with Ubuntu 18.04.4 LTS, Telegraf 1.14.1
+# telegraf-speedtest
+Utilise the official [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli) to export results to Influxdb via Telegraf to be displayed within Grafana.
+
+Tested with Ubuntu 18.04.5 LTS, Telegraf 1.15.3
 
 HOWTO:
-1. Install the official SpeedTest CLI from SpeedTest.net - https://www.speedtest.net/apps/cli
-2. Run 'speedtest' once (to accept the license)
-3. Add the configuration into telegraf, either
-   * store speedtest.conf under /etc/telegraf/telegraf.d  
+1. Install the the official [Ookla Speedtest CLI](https://www.speedtest.net/apps/cli)
+2. Add the configuration into telegraf, either
+   * store speedtest.conf under ```/etc/telegraf/telegraf.d/speedtest.conf```  
     _\* OR \*_
    * copy the config and add to your telegraf.conf  
-4. Restart telegraf (e.g. under Ubuntu ```sudo systemctl restart telegraf```)
-
-Optionally, install Grafana dashboard #12428  
-  https://grafana.com/grafana/dashboards/12428
+3. Restart telegraf (e.g. under Ubuntu ```sudo systemctl restart telegraf```)
+4. Import the provided json template into Grafana
+5. Select the appropriate host from the top left of the dashboard
+6. Happy trending!
   
-Enjoy!<br>
-p.s. Do not set the interval too short or you may get banned...
+p.s. be careful when setting the interval time, too often and you may risk being being blocked from utilising the service.
